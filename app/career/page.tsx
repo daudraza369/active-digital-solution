@@ -1,6 +1,4 @@
-import Link from "next/link";
 import CareerForm from "@/components/CareerForm";
-import { Briefcase, Trophy, Users, GraduationCap } from "lucide-react";
 
 const JOBS = [
   { title: "Content Writer Intern", exp: "Minimum 1-2 Yrs Experience" },
