@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "Essential Cleaning",
+    "thumbnail": "https://picsum.photos/seed/essential/600/400",
+    "url": "https://essentialcleaningservicesofutahllc.com/"
+  },
+  {
+    "id": "2",
+    "name": "Imperial Technology",
+    "thumbnail": "https://picsum.photos/seed/imperial/600/400",
+    "url": "https://itsllc.net/"
+  },
+  {
+    "id": "3",
+    "name": "AA1 Douglas",
+    "thumbnail": "https://picsum.photos/seed/aa1/600/400",
+    "url": "https://aa1douglasconstruction.co/"
+  },
+  {
+    "id": "4",
+    "name": "Eterna Dental",
+    "thumbnail": "https://picsum.photos/seed/eterna/600/400",
+    "url": "https://eternadentalaesthetics.com/"
+  },
+  {
+    "id": "5",
+    "name": "Wakz Elite",
+    "thumbnail": "https://picsum.photos/seed/wakz/600/400",
+    "url": "https://wakzelite.com/"
+  },
+  {
+    "id": "6",
+    "name": "4 Season",
+    "thumbnail": "https://picsum.photos/seed/4season/600/400",
+    "url": "https://4seasonsremodelinginc.com/"
+  },
+  {
+    "id": "7",
+    "name": "Horizon Drafting",
+    "thumbnail": "https://picsum.photos/seed/horizon/600/400",
+    "url": "https://horizondrafting.com/"
+  },
+  {
+    "id": "8",
+    "name": "Touch Communication",
+    "thumbnail": "https://picsum.photos/seed/touch/600/400",
+    "url": "https://touchcommunications.net/"
+  },
+  {
+    "id": "9",
+    "name": "New Generation",
+    "thumbnail": "https://picsum.photos/seed/newgen/600/400",
+    "url": "https://newgenerationpainters.net/"
+  },
+  {
+    "id": "10",
+    "name": "Shawn's Handyman",
+    "thumbnail": "https://picsum.photos/seed/shawn/600/400",
+    "url": "https://shawnshandyman.com/"
+  },
+  {
+    "id": "11",
+    "name": "Premier Polished",
+    "thumbnail": "https://picsum.photos/seed/premier/600/400",
+    "url": "https://polishedpremier.com/"
+  },
+  {
+    "id": "12",
+    "name": "Frankey Locksmith",
+    "thumbnail": "https://picsum.photos/seed/frankey/600/400",
+    "url": "https://frankeylocksmith.com/"
+  }
+]

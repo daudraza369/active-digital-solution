@@ -1,0 +1,44 @@
+[
+  {
+    "id": "search-engine-optimisation",
+    "name": "Search Engine Optimisation",
+    "slug": "search-engine-optimisation",
+    "shortDescription": "Our SEO services enhance your digital footprint, driving organic traffic and boosting your online presence.",
+    "description": "Our dedicated team specializes in Search Engine Rankings, generating leads and revenue through meticulous Keyword Research. As a top-tier technical SEO agency, we excel in Link Building and comprehensive website optimization. Choose Active Digital Solution for SEO marketing excellence, employing specialists, analyzers, and consultants to enhance Google ranking."
+  },
+  {
+    "id": "google-business-profile",
+    "name": "Google Business Profile",
+    "slug": "google-business-profile",
+    "shortDescription": "Enhance your online presence with our expert service, ensuring visibility and engagement on the Google platform.",
+    "description": "Get your business discovered on Google with our comprehensive Google Business Profile setup and optimization. We ensure your listing stands out with accurate information, compelling photos, and strategic optimization to attract local customers."
+  },
+  {
+    "id": "social-media-marketing",
+    "name": "Social Media Marketing",
+    "slug": "social-media-marketing",
+    "shortDescription": "Our AI-powered solutions optimize campaigns, enhance customer targeting, and drive unparalleled results.",
+    "description": "Connect with your audience where they spend their time. Our social media marketing strategies build brand awareness, engage followers, and convert engagement into measurable business growth across all major platforms."
+  },
+  {
+    "id": "web-development",
+    "name": "Web Development",
+    "slug": "web-development",
+    "shortDescription": "Our team of skilled web developers crafts customized solutions to bring your ideas to life.",
+    "description": "From web applications to intricate software systems, our skilled web developers craft customized solutions to bring your ideas to life. We build fast, scalable, and user-friendly websites that drive results."
+  },
+  {
+    "id": "geo-fencing",
+    "name": "Geo-fencing",
+    "slug": "geo-fencing",
+    "shortDescription": "Target customers in specific geographic areas with precision marketing that drives foot traffic.",
+    "description": "Reach potential customers when they are physically near your business. Our geo-fencing solutions create virtual boundaries that trigger targeted ads and messages, driving foot traffic and increasing conversions."
+  },
+  {
+    "id": "ai-optimisation-gemini",
+    "name": "AI Optimisation & Gemini",
+    "slug": "ai-optimisation-gemini",
+    "shortDescription": "Leverage cutting-edge AI and Gemini to optimize your digital presence and automate intelligent marketing.",
+    "description": "Stay ahead with AI-driven marketing. We harness the power of Gemini and advanced AI tools to optimize your content, automate customer interactions, and deliver personalized experiences at scale."
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "written": [
+    {
+      "id": "1",
+      "quote": "Active Digital Solution's AI-powered marketing solutions have revolutionized our business operations, streamlining processes and improving efficiency. We've seen a significant increase in engagement.",
+      "name": "William J. Rivera",
+      "title": "CEO"
+    },
+    {
+      "id": "2",
+      "quote": "Active Digital Solution's marketing services have helped us reach new heights in our industry. Their team of marketing experts provided us with a comprehensive approach.",
+      "name": "Marlene L. Vargas",
+      "title": "Marketing Manager"
+    },
+    {
+      "id": "3",
+      "quote": "Active Digital Solution's AI management services have been a game-changer for us. Their innovative approach has optimized our fleet performance, reduced costs, and improved customer satisfaction.",
+      "name": "Sara Johnson",
+      "title": "CTO"
+    },
+    {
+      "id": "4",
+      "quote": "Active Digital Solution revamped and redesigned our website. Their SEO services significantly boosted our online visibility, and their expertise in optimizing our GMB is great.",
+      "name": "John I. Doss",
+      "title": "Marketing Specialist"
+    }
+  ],
+  "video": [
+    {
+      "id": "1",
+      "title": "Heirloom Roofing",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "2",
+      "title": "Jubilee Movers",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "3",
+      "title": "Leamon Aid Construction",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "4",
+      "title": "Olive",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "5",
+      "title": "Mark",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "6",
+      "title": "MJ Mountain Builders",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "7",
+      "title": "Jennifer's Happy Housekeeping",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    },
+    {
+      "id": "8",
+      "title": "Temecula's Trusted Toolbox",
+      "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    }
+  ]
+}
