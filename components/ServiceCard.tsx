@@ -9,12 +9,12 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ name, description, href }: ServiceCardProps) {
   return (
-    <div className="bg-dark-card border border-dark-border rounded-lg p-6 hover:border-accent transition group">
-      <h3 className="text-xl font-semibold text-accent mb-2">{name}</h3>
-      <p className="text-gray-400 mb-4">{description}</p>
+    <div className="trg-card group">
+      <h3 className="font-orbitron text-xl font-medium text-trg-primary mb-2">{name}</h3>
+      <p className="text-trg-text/80 font-light text-sm mb-4">{description}</p>
       <Link
         href={href}
-        className="inline-flex items-center gap-2 text-accent hover:text-accent-hover transition group-hover:gap-3"
+        className="inline-flex items-center gap-2 text-trg-accent hover:text-trg-accent/80 font-medium transition group-hover:gap-3"
       >
         Read More
         <ArrowRight className="w-4 h-4" />

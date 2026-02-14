@@ -1,10 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 import ServiceCard from "@/components/ServiceCard";
 import ProjectCard from "@/components/ProjectCard";
 import VideoCarousel from "@/components/VideoCarousel";
+import HeroSlider from "@/components/HeroSlider";
 import servicesData from "@/data/services.json";
 import projectsData from "@/data/projects.json";
 import testimonialsData from "@/data/testimonials.json";
+import { Users, Building2, Award } from "lucide-react";
 
 export default function Home() {
   const featuredServices = servicesData.slice(0, 4);
@@ -13,90 +16,84 @@ export default function Home() {
 
   return (
     <div>
-      {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center bg-dark-bg overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent" />
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Digital Marketing <span className="text-accent">Services</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
-            Future-Proofing For Web Presence With AI and SEO Coverage
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href="/services"
-              className="border border-accent px-8 py-3 rounded hover:bg-accent hover:text-dark-bg transition"
-            >
-              Explore Now
-            </Link>
-            <Link
-              href="/contact-us"
-              className="border border-accent px-8 py-3 rounded hover:bg-accent hover:text-dark-bg transition"
-            >
-              Talk to an expert
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       {/* Why Choose */}
-      <section className="py-20 bg-dark-card/50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Why Choose <span className="text-accent">Active Digital Solution</span>?
+      <section className="relative py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            background: "radial-gradient(at center center, #2EDAF1 0%, #053F48 76%)",
+          }}
+        />
+        <div className="relative max-w-[1290px] mx-auto px-4">
+          <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-center mb-4 text-trg-primary">
+            Why Choose <span className="text-trg-accent">Active Digital Solution</span>?
           </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
+          <p className="text-trg-text/80 text-center max-w-2xl mx-auto mb-16 font-light">
             We assist in leading digital transformation teams of specialists in crafting digital strategies and building businesses.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-dark-bg border border-dark-border rounded-lg p-6">
-              <h3 className="text-accent font-semibold text-lg mb-2">Client-Centric Approach:</h3>
-              <p className="text-gray-400">
-                At Active Digital Solution, we prioritize our clients needs above all else. We take the time to understand your business objectives, challenges, and vision, ensuring that our web app solutions are tailored to meet your specific requirements.
-              </p>
-            </div>
-            <div className="bg-dark-bg border border-dark-border rounded-lg p-6">
-              <h3 className="text-accent font-semibold text-lg mb-2">Innovative Solutions:</h3>
-              <p className="text-gray-400">
-                Innovation is in our DNA. Active Digital Solution stays at the forefront of technology trends, integrating the latest tools, frameworks, and methodologies into our web app development process and smart SEO services.
-              </p>
-            </div>
-            <div className="bg-dark-bg border border-dark-border rounded-lg p-6">
-              <h3 className="text-accent font-semibold text-lg mb-2">Latest Technology</h3>
-              <p className="text-gray-400">
-                At Active Digital Solution, we redefine possibilities by harnessing the latest in AI-driven intelligence, blockchain security, Progressive Web Apps (PWAs), and cutting-edge edge computing solutions.
-              </p>
-            </div>
-            <div className="bg-dark-bg border border-dark-border rounded-lg p-6">
-              <h3 className="text-accent font-semibold text-lg mb-2">Trusted By Big Companies</h3>
-              <p className="text-gray-400">
-                Our proven track record with industry leaders speaks to our commitment to excellence and results-driven solutions.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Client-Centric Approach:",
+                desc: "At Active Digital Solution, we prioritize our clients needs above all else. We take the time to understand your business objectives, challenges, and vision.",
+                icon: Users,
+              },
+              {
+                title: "Innovative Solutions:",
+                desc: "Innovation is in our DNA. We stay at the forefront of technology trends, integrating the latest tools and methodologies.",
+                icon: Building2,
+              },
+              {
+                title: "Latest Technology",
+                desc: "We redefine possibilities by harnessing AI-driven intelligence, blockchain security, PWAs, and edge computing.",
+                icon: Award,
+              },
+              {
+                title: "Trusted By Big Companies",
+                desc: "Our proven track record with industry leaders speaks to our commitment to excellence.",
+                icon: Building2,
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="trg-card group cursor-default"
+              >
+                <div className="w-14 h-14 rounded-full bg-trg-accent flex items-center justify-center text-trg-accent-dark mb-4 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-8 h-8" />
+                </div>
+                <h3 className="font-orbitron text-xl font-medium text-trg-primary mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-trg-text/80 font-light text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Video Testimonials */}
       <VideoCarousel />
 
       {/* Transform CTA */}
-      <section className="py-20 bg-dark-card/50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-20 bg-trg-bg relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.07]"
+          style={{ backgroundColor: "#000C14" }}
+        />
+        <div className="relative max-w-[1290px] mx-auto px-4 text-center">
+          <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-trg-primary mb-2">
             Transform Your Business into a
           </h2>
-          <h2 className="text-3xl md:text-4xl font-bold text-accent mb-4">
+          <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-trg-accent mb-4">
             Technological Powerhouse
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-trg-text/80 max-w-2xl mx-auto mb-8 font-light">
             Enjoy enhanced innovation, efficiency, and remarkable growth as we guide your company to success in the digital era.
           </p>
-          <Link
-            href="/services"
-            className="inline-block border border-accent px-8 py-3 rounded hover:bg-accent hover:text-dark-bg transition"
-          >
+          <Link href="/services" className="trg-button inline-block text-trg-primary">
             Learn More
           </Link>
         </div>
@@ -104,15 +101,15 @@ export default function Home() {
 
       {/* Our Services */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Our <span className="text-accent">Services</span>
+        <div className="max-w-[1290px] mx-auto px-4">
+          <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-center mb-4">
+            Our <span className="text-trg-accent">Services</span>
           </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
-            Lets explore our cutting-edge SEO and different Development services for transformative possibilities.
+          <p className="text-trg-text/80 text-center max-w-2xl mx-auto mb-12 font-light">
+            Lets explore our cutting-edge SEO and Development services for transformative possibilities.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((service) => (
+            {featuredServices.map((service: { id: string; name: string; shortDescription: string; slug: string }) => (
               <ServiceCard
                 key={service.id}
                 name={service.name}
@@ -124,7 +121,7 @@ export default function Home() {
           <div className="text-center mt-8">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-accent hover:text-accent-hover"
+              className="inline-flex items-center gap-2 text-trg-accent hover:text-trg-accent/80 font-medium"
             >
               View All Services
               <span>→</span>
@@ -134,13 +131,13 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section className="py-20 bg-dark-card/50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Our Successfully Completed <span className="text-accent">Projects</span>
+      <section className="py-20 bg-trg-bg">
+        <div className="max-w-[1290px] mx-auto px-4">
+          <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-center mb-4">
+            Our Successfully Completed <span className="text-trg-accent">Projects</span>
           </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
-            Explore our completed projects—an intersection of innovation and implementation, each telling a success story on its own.
+          <p className="text-trg-text/80 text-center max-w-2xl mx-auto mb-12 font-light">
+            Explore our completed projects—an intersection of innovation and implementation.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project: { id: string; name: string; thumbnail: string; url: string }) => (
@@ -155,7 +152,7 @@ export default function Home() {
           <div className="text-center mt-8">
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 text-accent hover:text-accent-hover"
+              className="inline-flex items-center gap-2 text-trg-accent hover:text-trg-accent/80 font-medium"
             >
               View All Project
               <span>→</span>
@@ -166,22 +163,22 @@ export default function Home() {
 
       {/* Written Testimonials */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <div className="max-w-[1290px] mx-auto px-4">
+          <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-center mb-4">
             Find Out Why Our Clients Keep Coming Back
           </h2>
-          <p className="text-gray-400 text-center max-w-3xl mx-auto mb-12">
-            Experience the future of Clients loyalty with our Smart SEO and Web Development services! Lets find out How Our Unparalleled Technology Delights Clients and Drives Results. Hear Directly from Our Satisfied Clients!
+          <p className="text-trg-text/80 text-center max-w-3xl mx-auto mb-12 font-light">
+            Experience the future of Clients loyalty with our Smart SEO and Web Development services!
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {testimonials.map((t: { id: string; quote: string; name: string; title: string }) => (
               <div
                 key={t.id}
-                className="bg-dark-card border border-dark-border rounded-lg p-6"
+                className="trg-card"
               >
-                <p className="text-gray-300 mb-4">&ldquo;{t.quote}&rdquo;</p>
-                <p className="font-semibold text-accent">{t.name}</p>
-                <p className="text-gray-500 text-sm">{t.title}</p>
+                <p className="text-trg-text/90 mb-4 font-light italic">&ldquo;{t.quote}&rdquo;</p>
+                <p className="font-semibold text-trg-accent">{t.name}</p>
+                <p className="text-trg-text/60 text-sm">{t.title}</p>
               </div>
             ))}
           </div>
@@ -189,44 +186,64 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 border-y border-dark-border">
-        <div className="container mx-auto px-4">
+      <section className="py-16 border-y border-trg-border">
+        <div className="max-w-[1290px] mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">0+</p>
-              <p className="text-gray-400">Trusted Partners</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">0+</p>
-              <p className="text-gray-400">Trusted Customers</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">0+</p>
-              <p className="text-gray-400">Permanent Clients</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">0+</p>
-              <p className="text-gray-400">Years Of Experience</p>
-            </div>
+            {[
+              { num: "200+", label: "Trusted Partners" },
+              { num: "1300+", label: "Trusted Customers" },
+              { num: "250+", label: "Permanent Clients" },
+              { num: "4+", label: "Years Of Experience" },
+            ].map((s, i) => (
+              <div key={i}>
+                <p className="font-orbitron text-3xl md:text-4xl font-semibold text-trg-accent">
+                  {s.num.replace("+", "")}
+                  <span className="text-2xl align-super ml-0.5">+</span>
+                </p>
+                <p className="text-trg-text/70 text-sm mt-1">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Lead CTA */}
-      <section className="py-20 bg-dark-card/50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Lead with Innovation - Join us for best Strategies for Web & SEO Advancement
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-            Contact us today and let Active Digital Solutions innovative strategies lead your WEB and SEO endeavors to new heights of innovation and success.
-          </p>
-          <Link
-            href="/contact-us"
-            className="inline-block border border-accent px-8 py-3 rounded hover:bg-accent hover:text-dark-bg transition"
-          >
-            Contact Us
-          </Link>
+      {/* Lead CTA - TRG layout: robot left, text right */}
+      <section
+        className="py-20 relative overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(135deg, rgba(0,12,20,0.98) 0%, rgba(5,63,72,0.6) 50%, rgba(0,12,20,0.98) 100%)",
+        }}
+      >
+        <div className="relative max-w-[1290px] mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Robot image - left (hidden on mobile, shown on lg) */}
+            <div className="relative hidden lg:block h-[320px] md:h-[400px] order-2 lg:order-1">
+              <Image
+                src="https://therankinggeeks.ai/wp-content/uploads/2023/11/robot-ZHM8ZSZ.png"
+                alt=""
+                fill
+                className="object-contain object-left"
+                sizes="(max-width: 1024px) 0vw, 50vw"
+              />
+            </div>
+            {/* Content - right */}
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <h2 className="font-outfit text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-trg-primary leading-tight">
+                Lead with Innovation - Join us for best Strategies for{" "}
+                <span className="text-trg-accent">Web & SEO Advancement</span>
+              </h2>
+              <p className="text-trg-text/80 max-w-xl mx-auto lg:mx-0 mb-8 font-light">
+                Contact us today and let Active Digital Solutions innovative strategies lead your WEB and SEO endeavors to new heights of innovation and success.
+              </p>
+              <Link
+                href="/contact-us"
+                className="trg-button inline-block text-trg-primary animate-float"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

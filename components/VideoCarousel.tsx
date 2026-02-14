@@ -6,24 +6,24 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const VIDEO_TESTIMONIALS = [
-  { id: 1, title: "Heirloom Roofing" },
-  { id: 2, title: "Jubilee Movers" },
-  { id: 3, title: "Leamon Aid Construction" },
-  { id: 4, title: "Olive" },
-  { id: 5, title: "Mark" },
-  { id: 6, title: "MJ Mountain Builders" },
-  { id: 7, title: "Jennifer's Happy Housekeeping" },
-  { id: 8, title: "Temecula's Trusted Toolbox" },
+  { id: 1, title: "Heirloom Roofing", video: "IMG_8127-1.mp4" },
+  { id: 2, title: "Jubilee Movers", video: "IMG_5996-1.mp4" },
+  { id: 3, title: "Leamon Aid Construction", video: "Video-1.mp4" },
+  { id: 4, title: "Olive Construction", video: "IMG_0-4.mp4" },
+  { id: 5, title: "MJ Mountain Builders", video: "IMG_0-3.mp4" },
+  { id: 6, title: "Customer Testimonial", video: "VID_20240227_131007851-1.mp4" },
+  { id: 7, title: "Customer Testimonial", video: "media_20250310_215033_2058355812101990175.mp4" },
+  { id: 8, title: "Customer Testimonial", video: "Review-Video-2.3.2025_2.mp4" },
 ];
 
 export default function VideoCarousel() {
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Customer <span className="text-accent">Reviews</span>
+    <section className="py-20 bg-trg-bg">
+      <div className="max-w-[1290px] mx-auto px-4">
+        <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-center mb-4">
+          Customer <span className="text-trg-accent">Reviews</span>
         </h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+        <p className="text-trg-text/80 text-center max-w-2xl mx-auto mb-12 font-light">
           Get an idea of result-driven solutions that changed the business experience of these owners.
         </p>
         <Swiper
@@ -35,20 +35,28 @@ export default function VideoCarousel() {
             1024: { slidesPerView: 3 },
           }}
           autoplay={{ delay: 4000 }}
-          pagination={{ clickable: true }}
-          className="pb-12"
+          pagination={{
+            clickable: true,
+            bulletClass: "swiper-pagination-bullet",
+            bulletActiveClass: "swiper-pagination-bullet-active !bg-trg-accent",
+          }}
+          className="pb-12 [&_.swiper-pagination-bullet]:bg-white/40 [&_.swiper-pagination-bullet-active]:bg-trg-accent"
         >
           {VIDEO_TESTIMONIALS.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="bg-dark-card border border-dark-border rounded-lg overflow-hidden aspect-video flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3">
-                    <svg className="w-8 h-8 text-accent ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-accent font-medium">{item.title}</p>
-                  <p className="text-gray-500 text-sm mt-1">Video testimonial</p>
+              <div className="trg-card aspect-video overflow-hidden">
+                <video
+                  src={`/videos/${item.video}`}
+                  className="w-full h-full object-cover"
+                  muted
+                  playsInline
+                  autoPlay
+                  loop
+                  controls
+                  controlsList="nodownload"
+                />
+                <div className="p-3 text-center">
+                  <p className="font-orbitron text-trg-accent font-medium text-sm">{item.title}</p>
                 </div>
               </div>
             </SwiperSlide>
