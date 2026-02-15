@@ -86,10 +86,10 @@ export default function HeroSlider() {
             {SLIDES[current].subtitle}
           </p>
           <div className="mt-8 flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-            <Link href="/services" className="trg-button text-trg-primary animate-float">
+            <Link href="/services" className="elementor-button elementor-animation-float trg-button text-white">
               Explore Now
             </Link>
-            <Link href="/contact-us" className="trg-button text-trg-primary ml-2 animate-float" style={{ animationDelay: "150ms" }}>
+            <Link href="/contact-us" className="elementor-button elementor-animation-float trg-button text-white ml-2">
               Talk to an expert
             </Link>
           </div>

@@ -1,7 +1,16 @@
 import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
+import FunFactCounter from "@/components/FunFactCounter";
 import servicesData from "@/data/services.json";
+import { SERVICE_IMAGES } from "@/lib/service-images";
 import testimonialsData from "@/data/testimonials.json";
+
+const STATS = [
+  { num: 1300, suffix: "+", label: "Trusted Customers" },
+  { num: 250, suffix: "+", label: "Permanent Clients" },
+  { num: 4, suffix: "+", label: "Years Of Experience" },
+  { num: 50, suffix: "+", label: "Awards" },
+];
 
 export default function ServicesPage() {
   const testimonials = testimonialsData.written;
@@ -30,6 +39,7 @@ export default function ServicesPage() {
                 name={service.name}
                 description={service.shortDescription}
                 href={`/services/${service.slug}`}
+                image={SERVICE_IMAGES[service.id]}
               />
             ))}
           </div>
@@ -40,22 +50,14 @@ export default function ServicesPage() {
       <section className="py-12 border-y border-dark-border">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">0+</p>
-              <p className="text-gray-400">Trusted Customers</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">0+</p>
-              <p className="text-gray-400">Permanent Clients</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">0+</p>
-              <p className="text-gray-400">Years Of Experience</p>
-            </div>
-            <div>
-              <p className="text-3xl md:text-4xl font-bold text-accent">0+</p>
-              <p className="text-gray-400">Awards</p>
-            </div>
+            {STATS.map((s, i) => (
+              <div key={i}>
+                <p className="text-3xl md:text-4xl font-bold text-accent">
+                  <FunFactCounter end={s.num} suffix={s.suffix} duration={3500} />
+                </p>
+                <p className="text-gray-400">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

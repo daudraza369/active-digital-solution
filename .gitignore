@@ -32,3 +32,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Exclude MD files per request
+*.md
+
+# IDE and reference files
+.cursor/
+*.har
+The Ranking Geeks Expert Digital Marketing and AI Solutions.html
+The Ranking Geeks Expert Digital Marketing and AI Solutions_files/
+trg-page.html
+
+# Duplicate CSS (real files are in styles/trg/)
+/post-*.css

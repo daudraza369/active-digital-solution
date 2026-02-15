@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Outfit, Orbitron } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import TrgStyles from "@/components/TrgStyles";
 import Footer from "@/components/Footer";
 
 const poppins = Poppins({
@@ -33,7 +34,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${outfit.variable} ${orbitron.variable}`}>
-      <body className="min-h-screen flex flex-col bg-trg-bg text-trg-text antialiased font-poppins">
+      <body className="elementor-kit-473 min-h-screen flex flex-col bg-trg-bg text-trg-text antialiased font-poppins">
+        <TrgStyles />
         <Header />
         <main className="flex-1 pt-20">{children}</main>
         <Footer />

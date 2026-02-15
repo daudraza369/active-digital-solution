@@ -27,19 +27,27 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-trg-bg/95 backdrop-blur border-b border-trg-border shrinker overflow-visible">
-      <div className="max-w-[1290px] mx-auto px-4 flex items-center justify-between h-20">
-        <Link href="/" className="flex items-center gap-3 shrinking-logo flex-shrink-0">
-          <Image
-            src="/logo.svg"
-            alt="Active Digital Solution"
-            width={320}
-            height={120}
-            className="h-[9rem] w-auto object-contain min-w-[140px]"
-            unoptimized
-          />
-        </Link>
+    <header
+      data-elementor-type="header"
+      data-elementor-id="45"
+      className="elementor elementor-45 elementor-location-header elementor-sticky shrinker fixed top-0 left-0 right-0 z-50 bg-[#01141D]/95 backdrop-blur border-b border-white/10"
+    >
+      <div className="elementor-container max-w-[1285px] mx-auto px-4 sm:px-6 flex items-center justify-between h-[64px] py-1.5">
+        {/* Logo - height fits header, width maximized for visibility */}
+        <div className="elementor-element flex-shrink-0 h-full flex items-center">
+          <Link href="/" className="shrinking-logo flex items-center h-full">
+            <Image
+              src="/logo.svg"
+              alt="Active Digital Solution"
+              width={320}
+              height={120}
+              className="h-[88px] sm:h-[100px] md:h-[120px] w-auto object-contain min-w-[240px] max-w-[520px]"
+              unoptimized
+            />
+          </Link>
+        </div>
 
+        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) =>
             link.hasDropdown ? (
@@ -51,7 +59,7 @@ export default function Header() {
               >
                 <Link
                   href={link.href}
-                  className="flex items-center gap-1 text-trg-primary hover:text-trg-accent transition font-medium"
+                  className="flex items-center gap-1 text-white hover:text-[#2EDAF1] transition font-semibold"
                 >
                   {link.name}
                   <ChevronDown
@@ -59,12 +67,12 @@ export default function Header() {
                   />
                 </Link>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-1 py-2 w-56 bg-trg-card border border-trg-border rounded-xl shadow-xl">
+                  <div className="absolute top-full left-0 mt-1 py-2 w-56 bg-[#01141D] border border-white/20 rounded-xl shadow-xl">
                     {SERVICES.map((s) => (
                       <Link
                         key={s.href}
                         href={s.href}
-                        className="block px-4 py-2 text-trg-text/80 hover:text-trg-accent hover:bg-trg-bg transition"
+                        className="block px-4 py-2 text-white/80 hover:text-[#2EDAF1] hover:bg-white/5 transition"
                       >
                         {s.name}
                       </Link>
@@ -76,7 +84,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-trg-primary hover:text-trg-accent transition font-medium"
+                className="text-white hover:text-[#2EDAF1] transition font-semibold"
               >
                 {link.name}
               </Link>
@@ -84,17 +92,19 @@ export default function Header() {
           )}
         </nav>
 
+        {/* CTA - TRG elementor-button with float animation */}
         <div className="hidden lg:block">
           <Link
             href="/contact-us"
-            className="trg-button inline-block text-trg-primary"
+            className="elementor-button elementor-animation-float inline-flex items-center justify-center !px-6 !py-2 text-sm font-medium text-white border border-[#2EDAF1] rounded-[50px] hover:bg-[#2EDAF1] hover:text-[#01141D] transition-colors"
           >
             Get a proposal
           </Link>
         </div>
 
+        {/* Mobile menu toggle */}
         <button
-          className="lg:hidden p-2 text-trg-primary"
+          className="lg:hidden p-2 text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -102,27 +112,30 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-trg-border bg-trg-bg">
+        <div className="lg:hidden border-t border-white/10 bg-[#01141D]">
           <div className="max-w-[1290px] mx-auto px-4 py-4 space-y-2">
             {NAV_LINKS.filter((l) => !l.hasDropdown).map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="block py-2 text-trg-primary hover:text-trg-accent"
+                className="block py-2 text-white hover:text-[#2EDAF1]"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
             <div className="pt-2">
-              <span className="block py-2 text-trg-accent font-medium">Services</span>
+              <span className="block py-2 text-[#2EDAF1] font-semibold">
+                Services
+              </span>
               <div className="pl-4 space-y-1">
                 {SERVICES.map((s) => (
                   <Link
                     key={s.href}
                     href={s.href}
-                    className="block py-2 text-trg-text/80 hover:text-trg-accent"
+                    className="block py-2 text-white/80 hover:text-[#2EDAF1]"
                     onClick={() => setMobileOpen(false)}
                   >
                     {s.name}
@@ -132,7 +145,7 @@ export default function Header() {
             </div>
             <Link
               href="/contact-us"
-              className="block py-2 trg-button text-center"
+              className="elementor-button elementor-animation-float block py-3 text-center mt-4 px-8 border border-[#2EDAF1] rounded-[50px] text-white hover:bg-[#2EDAF1] hover:text-[#01141D] w-fit mx-auto"
               onClick={() => setMobileOpen(false)}
             >
               Get a proposal

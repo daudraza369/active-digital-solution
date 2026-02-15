@@ -1,5 +1,5 @@
 import ContactForm from "@/components/ContactForm";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -43,9 +43,29 @@ export default function ContactPage() {
                   <a href="mailto:adam@activedigitalsolution.com" className="text-accent hover:underline">adam@activedigitalsolution.com</a>
                 </div>
               </div>
-              <div>
-                <h3 className="font-semibold mb-2">Official Social Media</h3>
-                <p className="text-gray-500 text-sm">LinkedIn, Facebook, Instagram - Connect with us</p>
+              <div className="flex items-start gap-4">
+                <Instagram className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-semibold mb-2">Follow Us</h3>
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href="https://www.instagram.com/p/DUwSTyfDhuJ/?igsh=cnp4cGFodGlrc3J1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:underline"
+                    >
+                      Instagram
+                    </a>
+                    <a
+                      href="https://vt.tiktok.com/ZSmrDAnqH/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:underline"
+                    >
+                      TikTok
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="bg-dark-card border border-dark-border rounded-lg p-6">

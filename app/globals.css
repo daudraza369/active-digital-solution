@@ -42,3 +42,20 @@ body {
     background: rgba(0, 225, 255, 0.19);
   }
 }
+
+/* TRG moveRight animation (brand logos marquee) */
+@keyframes moveRight {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* TRG scroll-triggered animations - .animated class */
+.animated {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+}
+
+/* elementor-invisible - hide until scroll-triggered animation */
+.elementor-invisible {
+  visibility: hidden;
+}
