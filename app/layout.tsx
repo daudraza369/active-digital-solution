@@ -33,11 +33,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${outfit.variable} ${orbitron.variable}`}>
-      <body className="elementor-kit-473 min-h-screen flex flex-col bg-trg-bg text-trg-text antialiased font-poppins">
+    <html lang="en" className={`${poppins.variable} ${outfit.variable} ${orbitron.variable} overflow-x-hidden`}>
+      <body className="elementor-kit-473 min-h-screen flex flex-col bg-trg-bg text-trg-text antialiased font-poppins overflow-x-hidden">
         <TrgStyles />
         <Header />
-        <main className="flex-1 pt-20">{children}</main>
+        <main className="flex-1 pt-16 sm:pt-20">{children}</main>
         <Footer />
       </body>
     </html>

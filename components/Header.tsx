@@ -30,18 +30,18 @@ export default function Header() {
     <header
       data-elementor-type="header"
       data-elementor-id="45"
-      className="elementor elementor-45 elementor-location-header elementor-sticky shrinker fixed top-0 left-0 right-0 z-50 bg-[#01141D]/95 backdrop-blur border-b border-white/10"
+      className="elementor elementor-45 elementor-location-header elementor-sticky shrinker fixed top-0 left-0 right-0 z-50 bg-[#01141D]/95 backdrop-blur border-b border-white/10 overflow-hidden"
     >
       <div className="elementor-container max-w-[1285px] mx-auto px-4 sm:px-6 flex items-center justify-between h-[64px] py-1.5">
-        {/* Logo - height fits header, width maximized for visibility */}
-        <div className="elementor-element flex-shrink-0 h-full flex items-center">
+        {/* Logo - height fits header on mobile, scales up on desktop */}
+        <div className="elementor-element shrink-0 min-w-0 max-w-[calc(100vw-80px)] h-full flex items-center">
           <Link href="/" className="shrinking-logo flex items-center h-full">
             <Image
-              src="/logo.svg"
+              src="/ACTIVE-DIGITAL.png"
               alt="Active Digital Solution"
               width={320}
               height={120}
-              className="h-[88px] sm:h-[100px] md:h-[120px] w-auto object-contain min-w-[240px] max-w-[520px]"
+              className="h-12 sm:h-14 md:h-[64px] lg:h-[64px] xl:h-[64px] max-h-[64px] w-auto object-contain min-w-[140px] sm:min-w-[200px] md:min-w-[240px] max-w-full"
               unoptimized
             />
           </Link>
@@ -104,7 +104,7 @@ export default function Header() {
 
         {/* Mobile menu toggle */}
         <button
-          className="lg:hidden p-1.5 text-white shrink-0 h-fit min-h-0"
+          className="lg:hidden overflow-hidden py-[9px] px-[17px] text-white shrink-0 h-fit min-h-0"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >

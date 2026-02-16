@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import SocialIcons from "@/components/SocialIcons";
 
 const DotIcon = () => (
   <span className="elementor-icon-list-icon inline-flex items-center justify-center mr-2">
@@ -19,14 +20,14 @@ export default function Footer() {
       <div className="elementor-element e-con-full e-flex e-con e-parent max-w-[1285px] mx-auto px-4 sm:px-8 md:px-16 flex flex-wrap justify-around gap-8 lg:gap-0 border-b border-white/20 pb-16 md:pb-24">
         {/* Column 1: Logo + Description */}
         <div className="elementor-element e-con-full e-flex e-con e-child w-full md:w-[25%] flex flex-col items-start">
-          <div className="elementor-widget elementor-widget-image mb-4">
-            <Link href="/" className="block w-fit">
+          <div className="elementor-widget elementor-widget-image mb-4 w-full max-w-[360px]">
+            <Link href="/" className="block w-full">
               <Image
-                src="/logo.svg"
+                src="/ACTIVE-DIGITAL.png"
                 alt="Active Digital Solution"
-                width={280}
-                height={140}
-                className="h-[140px] md:h-[180px] w-auto object-contain min-w-[360px] max-w-[500px]"
+                width={320}
+                height={120}
+                className="h-[80px] sm:h-[120px] md:h-[140px] lg:h-[180px] w-auto object-contain min-w-[140px] sm:min-w-[200px] max-w-full"
               />
             </Link>
           </div>
@@ -37,7 +38,7 @@ export default function Footer() {
 
         {/* Column 2: Our Services */}
         <div className="elementor-element e-con-full e-flex e-con e-child w-full md:w-[25%] flex flex-col pl-0 md:pl-12 lg:pl-20">
-          <h3 className="elementor-heading-title elementor-size-default text-[#2EDAF1] font-semibold text-2xl mb-4">
+          <h3 className="elementor-heading-title elementor-size-default text-[#2EDAF1] font-semibold text-xl sm:text-2xl mb-4">
             Our Services
           </h3>
           <ul className="elementor-icon-list-items space-y-2">
@@ -61,7 +62,7 @@ export default function Footer() {
 
         {/* Column 3: Quick Links */}
         <div className="elementor-element e-con-full e-flex e-con e-child w-full md:w-[25%] flex flex-col pl-0 md:pl-12 lg:pl-16">
-          <h3 className="elementor-heading-title elementor-size-default text-[#2EDAF1] font-semibold text-2xl mb-4">
+          <h3 className="elementor-heading-title elementor-size-default text-[#2EDAF1] font-semibold text-xl sm:text-2xl mb-4">
             Quick Links
           </h3>
           <ul className="elementor-icon-list-items space-y-2">
@@ -83,7 +84,7 @@ export default function Footer() {
 
         {/* Column 4: Contact */}
         <div className="elementor-element e-con-full e-flex e-con e-child w-full md:w-[25%] flex flex-col pl-0 md:pl-4">
-          <h3 className="elementor-heading-title elementor-size-default text-[#2EDAF1] font-semibold text-2xl mb-4">
+          <h3 className="elementor-heading-title elementor-size-default text-[#2EDAF1] font-semibold text-xl sm:text-2xl mb-4">
             Contact
           </h3>
           <ul className="elementor-icon-list-items space-y-2">
@@ -104,16 +105,7 @@ export default function Footer() {
               <span className="elementor-icon-list-text">9540 W QUAIL AVE<br />PEORIA, AZ 85382</span>
             </li>
             <li className="elementor-icon-list-item">
-              <a href="https://www.instagram.com/p/DUwSTyfDhuJ/?igsh=cnp4cGFodGlrc3J1" target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-[#2EDAF1] transition-colors">
-                <DotIcon />
-                <span className="elementor-icon-list-text">Instagram</span>
-              </a>
-            </li>
-            <li className="elementor-icon-list-item">
-              <a href="https://vt.tiktok.com/ZSmrDAnqH/" target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-[#2EDAF1] transition-colors">
-                <DotIcon />
-                <span className="elementor-icon-list-text">TikTok</span>
-              </a>
+              <SocialIcons className="flex gap-3" iconClassName="text-white hover:text-[#2EDAF1] transition-colors" />
             </li>
           </ul>
         </div>
@@ -124,7 +116,7 @@ export default function Footer() {
         <div className="elementor-widget-text-editor text-center md:text-left text-white/80 text-sm">
           ©2026 activedigitalsolution.com | All Rights Reserved.
         </div>
-        <div className="flex flex-wrap justify-center md:justify-center gap-4 md:gap-6 text-sm">
+        <div className="flex flex-wrap justify-center md:justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm">
           <Link href="/privacy-policy" className="flex items-center text-[#2EDAF1] hover:text-white transition-colors">
             <span className="elementor-icon-list-icon mr-2">•</span>
             <span>Privacy Policy</span>

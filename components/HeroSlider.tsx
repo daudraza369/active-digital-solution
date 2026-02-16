@@ -76,20 +76,20 @@ export default function HeroSlider() {
         </div>
       ))}
 
-      <div className="relative z-10 max-w-[1290px] mx-auto px-4 w-full">
+      <div className="relative z-10 max-w-[1290px] mx-auto px-4 sm:px-6 w-full">
         <div key={current} className="max-w-2xl">
-          <h1 className="font-outfit text-4xl md:text-5xl lg:text-[45px] font-semibold capitalize leading-[1.3em] tracking-wide animate-fade-in-up" style={{ animationDelay: "0ms" }}>
+          <h1 className="font-outfit text-3xl sm:text-4xl md:text-5xl lg:text-[45px] font-semibold capitalize leading-[1.3em] tracking-wide animate-fade-in-up" style={{ animationDelay: "0ms" }}>
             <span className="text-trg-accent">{SLIDES[current].title} </span>
             <span className="text-trg-primary">{SLIDES[current].highlight}</span>
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-trg-text/90 font-light animate-fade-in-up" style={{ animationDelay: "100ms" }}>
             {SLIDES[current].subtitle}
           </p>
-          <div className="mt-8 flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+          <div className="mt-8 flex flex-wrap gap-3 sm:gap-4 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
             <Link href="/services" className="elementor-button elementor-animation-float trg-button text-white">
               Explore Now
             </Link>
-            <Link href="/contact-us" className="elementor-button elementor-animation-float trg-button text-white ml-2">
+            <Link href="/contact-us" className="elementor-button elementor-animation-float trg-button text-white">
               Talk to an expert
             </Link>
           </div>

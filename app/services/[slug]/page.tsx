@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import servicesData from "@/data/services.json";
+import { SERVICE_IMAGES } from "@/lib/service-images";
 
 export async function generateStaticParams() {
   return servicesData.map((s: { slug: string }) => ({ slug: s.slug }));
@@ -16,23 +18,44 @@ export default async function ServicePage({
 
   if (!service) notFound();
 
+  const heroImage = SERVICE_IMAGES[(service as { id: string }).id];
+
   return (
     <div>
-      <section className="py-20 bg-dark-card/50">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <section className="relative py-20 overflow-hidden min-h-[280px] flex items-center">
+        {heroImage && (
+          <>
+            <Image
+              src={heroImage}
+              alt=""
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(90deg, rgba(0,12,20,0.92) 0%, rgba(0,12,20,0.7) 50%, rgba(0,12,20,0.4) 100%)",
+              }}
+            />
+          </>
+        )}
+        {!heroImage && <div className="absolute inset-0 bg-dark-card/50" />}
+        <div className="relative z-10 container mx-auto px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             {service.name}
           </h1>
-          <p className="text-xl text-gray-400 max-w-3xl">
+          <p className="text-base sm:text-xl text-gray-400 max-w-3xl">
             {service.shortDescription}
           </p>
         </div>
       </section>
 
       <section className="py-16">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <div className="prose prose-invert max-w-none">
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
               {service.description}
             </p>
           </div>

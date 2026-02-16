@@ -57,7 +57,7 @@ export default function Home() {
             background: "radial-gradient(at center center, #2EDAF1 0%, #053F48 76%)",
           }}
         />
-        <div className="relative max-w-[1290px] mx-auto px-4">
+        <div className="relative max-w-[1290px] mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fadeInUp" delay={600}>
             <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-center mb-4 text-white">
               Why Choose <span className="text-[#2EDAF1]">Active Digital Solution</span>?
@@ -137,7 +137,7 @@ export default function Home() {
             background: "radial-gradient(ellipse 80% 50% at 50% 0%, #2EDAF1 0%, transparent 70%)",
           }}
         />
-        <div className="relative max-w-[1290px] mx-auto px-4">
+        <div className="relative max-w-[1290px] mx-auto px-4 sm:px-6">
           <AnimatedSection animation="fadeInUp" delay={0}>
             <h2 className="font-outfit text-3xl md:text-4xl font-semibold text-center mb-4">
               Our <span className="text-[#2EDAF1]">Services</span>
@@ -242,13 +242,13 @@ export default function Home() {
       {/* Stats bar */}
       <section className="py-16 border-y border-white/16">
         <div className="max-w-[1290px] mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
             {STATS.map((s, i) => (
               <div key={i}>
                 <p className="font-orbitron text-3xl md:text-4xl font-semibold text-[#2EDAF1]">
                   <FunFactCounter end={s.num} suffix={s.suffix} duration={3500} />
                 </p>
-                <p className="text-white/70 text-sm mt-1">{s.label}</p>
+                <p className="text-white/70 text-xs sm:text-sm mt-1 break-words">{s.label}</p>
               </div>
             ))}
           </div>
@@ -263,7 +263,7 @@ export default function Home() {
             "linear-gradient(135deg, rgba(0,12,20,0.98) 0%, rgba(5,63,72,0.6) 50%, rgba(0,12,20,0.98) 100%)",
         }}
       >
-        <div className="relative max-w-[1290px] mx-auto px-4">
+        <div className="relative max-w-[1290px] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative hidden lg:block h-[320px] md:h-[400px] order-2 lg:order-1">
               <Image
