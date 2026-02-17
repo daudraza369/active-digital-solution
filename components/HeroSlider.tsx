@@ -96,16 +96,34 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-        {SLIDES.map((_, i) => (
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-4 sm:gap-6 md:gap-8 flex-wrap justify-center">
+        {[
+          { logo: "/logos/google.png", text: "Partner" },
+          { logo: "/logos/business.png", text: "Business Partner" },
+          { logo: "/logos/settings.png", text: "Solutions Partner" },
+          { logo: "/logos/shopify.png", text: "Shopify" },
+        ].map((partner, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              i === current ? "bg-trg-accent" : "bg-white/40"
+            className={`w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full flex flex-col items-center justify-center gap-1 p-2 border-2 bg-[#01141D]/80 backdrop-blur transition-all duration-300 hover:border-[#2EDAF1] hover:shadow-[0_0_20px_rgba(46,218,241,0.4)] ${
+              i === current
+                ? "border-[#2EDAF1] shadow-[0_0_20px_rgba(46,218,241,0.4)]"
+                : "border-[#2EDAF1]/60"
             }`}
             aria-label={`Go to slide ${i + 1}`}
-          />
+          >
+            <Image
+              src={partner.logo}
+              alt={partner.text}
+              width={36}
+              height={36}
+              className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 object-contain shrink-0"
+            />
+            <span className="text-[10px] sm:text-xs md:text-sm text-white/90 font-medium text-center leading-tight">
+              {partner.text}
+            </span>
+          </button>
         ))}
       </div>
     </section>

@@ -14,6 +14,13 @@
     "description": "Get your business discovered on Google with our comprehensive Google Business Profile setup and optimization. We ensure your listing stands out with accurate information, compelling photos, and strategic optimization to attract local customers."
   },
   {
+    "id": "google-ads",
+    "name": "Google Ads",
+    "slug": "google-ads",
+    "shortDescription": "Reach customers actively searching for your products and services with targeted Google Ads campaigns.",
+    "description": "Maximize your ROI with our data-driven Google Ads management. We create and optimize Search, Display, and Shopping campaigns that drive qualified traffic and conversions. Our certified specialists leverage advanced targeting, bidding strategies, and continuous optimization to ensure your ad spend delivers measurable results."
+  },
+  {
     "id": "social-media-marketing",
     "name": "Social Media Marketing",
     "slug": "social-media-marketing",

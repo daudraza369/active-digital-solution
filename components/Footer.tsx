@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="elementor-widget elementor-widget-image mb-4 w-full max-w-[360px]">
             <Link href="/" className="block w-full">
               <Image
-                src="/ACTIVE-DIGITAL.png"
+                src="/logo.png"
                 alt="Active Digital Solution"
                 width={320}
                 height={120}
@@ -45,6 +45,7 @@ export default function Footer() {
             {[
               { name: "Search Engine optimisation", href: "/services/search-engine-optimisation" },
               { name: "Google business profile", href: "/services/google-business-profile" },
+              { name: "Google Ads", href: "/services/google-ads" },
               { name: "Social media marketing", href: "/services/social-media-marketing" },
               { name: "Web development", href: "/services/web-development" },
               { name: "Geo-fencing", href: "/services/geo-fencing" },
@@ -70,6 +71,7 @@ export default function Footer() {
               { name: "Home", href: "/" },
               { name: "Projects", href: "/projects" },
               { name: "About Us", href: "/about" },
+              { name: "Career", href: "/career" },
               { name: "Contact Us", href: "/contact-us" },
             ].map((item) => (
               <li key={item.href} className="elementor-icon-list-item">
@@ -80,6 +82,15 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+          <div className="mt-4">
+            <Image
+              src="/google-partner.png"
+              alt="Google Partner"
+              width={160}
+              height={60}
+              className="h-14 w-auto object-contain brightness-110 contrast-110"
+            />
+          </div>
         </div>
 
         {/* Column 4: Contact */}
@@ -105,7 +116,7 @@ export default function Footer() {
               <span className="elementor-icon-list-text">9540 W QUAIL AVE<br />PEORIA, AZ 85382</span>
             </li>
             <li className="elementor-icon-list-item">
-              <SocialIcons className="flex gap-3" iconClassName="text-white hover:text-[#2EDAF1] transition-colors" />
+              <SocialIcons className="flex gap-3" iconClassName="text-white" />
             </li>
           </ul>
         </div>
@@ -113,9 +124,9 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="elementor-element e-flex e-con-boxed e-con e-parent max-w-[1285px] mx-auto px-4 sm:px-8 py-8 flex flex-col md:flex-row md:items-center md:justify-evenly gap-4">
-        <div className="elementor-widget-text-editor text-center md:text-left text-white/80 text-sm">
-          ©2026 activedigitalsolution.com | All Rights Reserved.
-        </div>
+          <div className="elementor-widget-text-editor text-center md:text-left text-white/80 text-sm">
+            ©2026 activedigitalsolution.com | All Rights Reserved.
+          </div>
         <div className="flex flex-wrap justify-center md:justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm">
           <Link href="/privacy-policy" className="flex items-center text-[#2EDAF1] hover:text-white transition-colors">
             <span className="elementor-icon-list-icon mr-2">•</span>

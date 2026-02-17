@@ -30,7 +30,7 @@ export default function CareerForm() {
       <select
         name="role"
         required
-        className="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded focus:border-accent focus:outline-none"
+        className="w-full px-4 py-3 bg-trg-card border border-trg-border rounded focus:border-trg-accent focus:outline-none text-white"
       >
         <option value="">What you applying for?</option>
         <option value="Content Writer Intern">Content Writer Intern</option>
@@ -47,32 +47,32 @@ export default function CareerForm() {
         type="file"
         name="resume"
         accept=".pdf,.doc,.docx"
-        className="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded focus:border-accent focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-accent file:text-dark-bg"
+        className="w-full px-4 py-3 bg-trg-card border border-trg-border rounded focus:border-trg-accent focus:outline-none text-white file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:bg-trg-accent file:text-trg-accent-dark"
       />
       <input
         type="text"
         name="name"
         placeholder="Your Name"
         required
-        className="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded focus:border-accent focus:outline-none"
+        className="w-full px-4 py-3 bg-trg-card border border-trg-border rounded focus:border-trg-accent focus:outline-none text-white placeholder:text-gray-400"
       />
       <input
         type="email"
         name="email"
         placeholder="Your Email"
         required
-        className="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded focus:border-accent focus:outline-none"
+        className="w-full px-4 py-3 bg-trg-card border border-trg-border rounded focus:border-trg-accent focus:outline-none text-white placeholder:text-gray-400"
       />
       <textarea
         name="message"
         placeholder="Cover letter / Message"
         rows={4}
-        className="w-full px-4 py-3 bg-dark-bg border border-dark-border rounded focus:border-accent focus:outline-none resize-none"
+        className="w-full px-4 py-3 bg-trg-card border border-trg-border rounded focus:border-trg-accent focus:outline-none resize-none text-white placeholder:text-gray-400"
       />
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full py-3 bg-accent text-dark-bg font-semibold rounded hover:bg-accent-hover transition disabled:opacity-50"
+        className="w-full py-3 bg-trg-accent text-trg-accent-dark font-semibold rounded hover:opacity-90 transition disabled:opacity-50"
       >
         {status === "loading" ? "Sending..." : status === "success" ? "Sent!" : "Send"}
       </button>

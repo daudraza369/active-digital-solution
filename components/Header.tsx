@@ -8,6 +8,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 const SERVICES = [
   { name: "Search Engine optimisation", href: "/services/search-engine-optimisation" },
   { name: "Google business profile", href: "/services/google-business-profile" },
+  { name: "Google Ads", href: "/services/google-ads" },
   { name: "Social media marketing", href: "/services/social-media-marketing" },
   { name: "Web development", href: "/services/web-development" },
   { name: "Geo-fencing", href: "/services/geo-fencing" },
@@ -19,6 +20,7 @@ const NAV_LINKS = [
   { name: "Services", href: "/services", hasDropdown: true },
   { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
+  { name: "Career", href: "/career" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 
@@ -30,18 +32,18 @@ export default function Header() {
     <header
       data-elementor-type="header"
       data-elementor-id="45"
-      className="elementor elementor-45 elementor-location-header elementor-sticky shrinker fixed top-0 left-0 right-0 z-50 bg-[#01141D]/95 backdrop-blur border-b border-white/10 overflow-hidden"
+      className="elementor elementor-45 elementor-location-header elementor-sticky shrinker fixed top-0 left-0 right-0 z-50 bg-[#01141D]/95 backdrop-blur border-b border-white/10"
     >
-      <div className="elementor-container max-w-[1285px] mx-auto px-4 sm:px-6 flex items-center justify-between h-[64px] py-1.5">
+      <div className="elementor-container max-w-[1285px] mx-auto px-4 sm:px-6 flex items-center justify-between h-[80px] py-1.5">
         {/* Logo - height fits header on mobile, scales up on desktop */}
         <div className="elementor-element shrink-0 min-w-0 max-w-[calc(100vw-80px)] h-full flex items-center">
           <Link href="/" className="shrinking-logo flex items-center h-full">
             <Image
-              src="/ACTIVE-DIGITAL.png"
+              src="/logo.png"
               alt="Active Digital Solution"
               width={320}
               height={120}
-              className="h-12 sm:h-14 md:h-[64px] lg:h-[64px] xl:h-[64px] max-h-[64px] w-auto object-contain min-w-[140px] sm:min-w-[200px] md:min-w-[240px] max-w-full"
+              className="h-14 sm:h-16 md:h-[72px] lg:h-[80px] xl:h-[80px] max-h-[80px] w-auto object-contain min-w-[160px] sm:min-w-[220px] md:min-w-[280px] max-w-full"
               unoptimized
             />
           </Link>
@@ -67,7 +69,7 @@ export default function Header() {
                   />
                 </Link>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-1 py-2 w-56 bg-[#01141D] border border-white/20 rounded-xl shadow-xl">
+                  <div className="absolute top-full left-0 mt-1 py-2 w-56 bg-[#01141D] border border-white/20 rounded-xl shadow-xl z-[60]">
                     {SERVICES.map((s) => (
                       <Link
                         key={s.href}

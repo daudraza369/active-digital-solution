@@ -33,7 +33,7 @@ interface SocialIconsProps {
   iconClassName?: string;
 }
 
-export default function SocialIcons({ className = "flex gap-3", iconClassName = "text-white hover:text-[#2EDAF1] transition-colors" }: SocialIconsProps) {
+export default function SocialIcons({ className = "flex gap-3", iconClassName = "text-white" }: SocialIconsProps) {
   return (
     <div className={className}>
       {SOCIAL_LINKS.map(({ name, href, icon }) => (
